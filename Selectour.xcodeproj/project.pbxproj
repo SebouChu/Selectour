@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0281DA0202D75ED002A7993 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0281D9E202D75ED002A7993 /* MessageCell.swift */; };
+		D0281DA1202D75ED002A7993 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0281D9F202D75ED002A7993 /* MessageCell.xib */; };
+		D0281DA5202D7924002A7993 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0281DA4202D7924002A7993 /* Message.swift */; };
 		D0337EB7202CF42200516E05 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0337EB6202CF42200516E05 /* SearchViewController.swift */; };
 		D0337EB9202CFFFA00516E05 /* FifthTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0337EB8202CFFFA00516E05 /* FifthTestViewController.swift */; };
 		D0337EBC202D065E00516E05 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0337EBB202D065E00516E05 /* ChatViewController.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0281D9E202D75ED002A7993 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		D0281D9F202D75ED002A7993 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		D0281DA4202D7924002A7993 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D0337EB6202CF42200516E05 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D0337EB8202CFFFA00516E05 /* FifthTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthTestViewController.swift; sourceTree = "<group>"; };
 		D0337EBB202D065E00516E05 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0281D9D202D75A8002A7993 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0281D9E202D75ED002A7993 /* MessageCell.swift */,
+				D0281D9F202D75ED002A7993 /* MessageCell.xib */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
 		D0337EB5202CF40800516E05 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +128,7 @@
 			children = (
 				D0B2A74D202CC5B10022BBA1 /* City.swift */,
 				D05231A7202CDDD300C786DB /* Activity.swift */,
+				D0281DA4202D7924002A7993 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +136,7 @@
 		D0B2A740202C9C5E0022BBA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0281D9D202D75A8002A7993 /* MessageCell */,
 				D0B2A72F202C8DFA0022BBA1 /* Main.storyboard */,
 				D0B2A734202C8DFA0022BBA1 /* LaunchScreen.storyboard */,
 			);
@@ -238,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B2A736202C8DFA0022BBA1 /* LaunchScreen.storyboard in Resources */,
+				D0281DA1202D75ED002A7993 /* MessageCell.xib in Resources */,
 				D0B2A733202C8DFA0022BBA1 /* Assets.xcassets in Resources */,
 				D0B2A731202C8DFA0022BBA1 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +271,7 @@
 				D0B2A73E202C9C490022BBA1 /* SecondTestViewController.swift in Sources */,
 				D0B2A72E202C8DFA0022BBA1 /* FirstTestViewController.swift in Sources */,
 				D0B2A753202CD5580022BBA1 /* DealsViewController.swift in Sources */,
+				D0281DA5202D7924002A7993 /* Message.swift in Sources */,
 				D0B2A744202CA3F50022BBA1 /* ThirdTestViewController.swift in Sources */,
 				D0B2A748202CC1FD0022BBA1 /* DiscoverViewController.swift in Sources */,
 				D0B2A750202CCEB50022BBA1 /* MenuViewController.swift in Sources */,
@@ -263,6 +282,7 @@
 				D0B2A74C202CC47A0022BBA1 /* DiscoverTableViewCell.swift in Sources */,
 				D0B2A74E202CC5B10022BBA1 /* City.swift in Sources */,
 				D0B2A746202CAEF70022BBA1 /* FourthTestViewController.swift in Sources */,
+				D0281DA0202D75ED002A7993 /* MessageCell.swift in Sources */,
 				D0337EBE202D067100516E05 /* MeetViewController.swift in Sources */,
 				D0337EBC202D065E00516E05 /* ChatViewController.swift in Sources */,
 				D0B2A755202CDC9C0022BBA1 /* DealsTableViewCell.swift in Sources */,
