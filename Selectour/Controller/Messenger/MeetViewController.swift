@@ -14,6 +14,9 @@ class MeetViewController: UIViewController {
     @IBOutlet weak var successView: UIView!
     @IBOutlet weak var successLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var timePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,27 @@ class MeetViewController: UIViewController {
     }
     
     @IBAction func submitBtnPressed(_ sender: UIButton) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "fr_FR")
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.locale = Locale(identifier: "fr_FR")
+        timeFormatter.dateStyle = .none
+        timeFormatter.timeStyle = .short
+        
+        let date = datePicker.date
+        let time = timePicker.date
+        
+        let dateString = dateFormatter.string(from: date)
+        let timeString = timeFormatter.string(from: time)
+        
+//        print("Date : \(dateString)")
+//        print("Time : \(timeString)")
+        
+        successLabel.text = "Bravo ! Vous avez pris rendez-vous avec Julien, le \(dateString) à \(timeString) !"
+        
         successView.isHidden = false
         UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.successView.alpha = 1.0

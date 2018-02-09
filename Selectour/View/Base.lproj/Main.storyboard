@@ -659,8 +659,10 @@
                     <navigationItem key="navigationItem" id="mWU-rZ-RuC"/>
                     <connections>
                         <outlet property="backBtn" destination="q95-gg-Xgc" id="tNB-KH-Hup"/>
+                        <outlet property="datePicker" destination="rru-wj-ZZi" id="htc-1Z-SSp"/>
                         <outlet property="successLabel" destination="Ffc-kf-6vd" id="xyB-kx-tnA"/>
                         <outlet property="successView" destination="F3r-vq-4Er" id="bCV-zd-pQP"/>
+                        <outlet property="timePicker" destination="z5B-Db-4hM" id="697-6o-IMk"/>
                         <segue destination="uI5-NN-BXV" kind="show" identifier="goToChatFromMeet" id="Doz-8d-nSs"/>
                     </connections>
                 </viewController>
