@@ -79,7 +79,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 self.selectedRow = -1
                 
                 self.configureTableView()
-                self.messagesTableView.reloadData()
+                self.reloadData()
             })
             alert.addAction(cancelAction)
             alert.addAction(deleteAction)
@@ -112,7 +112,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         
         self.configureTableView()
-        self.messagesTableView.reloadData()
+        self.reloadData()
     }
     
     @IBAction func sendBtnPressed(_ sender: UIButton) {
@@ -129,7 +129,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         messageTextField.text = ""
         
         self.configureTableView()
-        self.messagesTableView.reloadData()
+        self.reloadData()
         
         messageTextField.isEnabled = true
         sendBtn.isEnabled = true
@@ -173,12 +173,20 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         messagesTableView.estimatedRowHeight = 145.0
     }
     
+    func reloadData() {
+        messagesTableView.reloadData()
+        let indexPath = IndexPath(row: messagesArray.count - 1, section: 0)
+        messagesTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+    
     //MARK: UITextField Delegate Methods
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.5) {
-            self.heightConstraint.constant = 318
+            self.heightConstraint.constant = 308
             self.view.layoutIfNeeded()
+            let indexPath = IndexPath(row: self.messagesArray.count - 1, section: 0)
+            self.messagesTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
     }
     
@@ -204,7 +212,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         messageTextField.text = ""
         
         self.configureTableView()
-        self.messagesTableView.reloadData()
+        self.reloadData()
         
         messageTextField.isEnabled = true
         sendBtn.isEnabled = true
